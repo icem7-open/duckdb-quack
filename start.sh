@@ -16,6 +16,6 @@ echo "[2/2] Démarrage nginx + Quack..."
 nginx
 
 (
-  echo "LOAD quack; CALL quack_serve('quack:0.0.0.0:9495', allow_other_hostname => true, token => '${QUACK_TOKEN}');"
+  echo "CALL quack_serve('quack:0.0.0.0:9495', allow_other_hostname => true, token => '${QUACK_TOKEN}');"
   sleep infinity
 ) | exec duckdb "$DB_PATH"
